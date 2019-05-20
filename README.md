@@ -1,6 +1,8 @@
 ## list-reader-spfx
 
-This is where you include your WebPart documentation.
+This web part is intended to be used as a starting point to do simple REST list operations within SharePoint using SPFX.
+
+It includes a list picker property from @pnp/spfx-property-controls to pick a list and then displays the list name within the web part.
 
 ### Building the code
 
