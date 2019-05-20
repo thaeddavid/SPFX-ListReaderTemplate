@@ -14,7 +14,13 @@ export default class ListReader extends React.Component<IListReaderProps, IListI
       Title: 'Please select a list by editing the web part properties.'
     }
   }
+  public componentDidMount(): void {
+    this.callListService();
+  }
   public componentDidUpdate(): void {
+    this.callListService();
+  }
+  private callListService(): void {
     const gl: ListService = new ListService(this.props.sScope);
     if (this.props.listID != null) {
       gl.getListData(this.props.listID, this.props.wUrl).then((lval: IListItem) => {
